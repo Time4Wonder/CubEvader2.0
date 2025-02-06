@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://vxi4lpslxf64"]
+
+[ext_resource type="PackedScene" uid="uid://c6saa1kgpriwm" path="res://scenes/player.tscn" id="1_tydhe"]
+
+[node name="World" type="Node3D"]
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1, 0)
+use_collision = true
+
+[node name="Player" parent="." instance=ExtResource("1_tydhe")]
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.980416, 0.196939, 0, -0.196939, 0.980416, 0, 0.927302, 4.51967)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.885872, 0.181063, -0.427138, 0, 0.920696, 0.390281, 0.46393, -0.345739, 0.815618, -7.26188, 1.48992, 5.81669)
